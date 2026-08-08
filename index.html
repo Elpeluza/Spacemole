@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CesiumVS · Satélite</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cesium@1.123.0/Build/Cesium/Widgets/widgets.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="cesiumContainer" aria-label="Mapa satelital interactivo"></main>
+
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="CesiumVS inicio">
+        <span class="brand-mark">◈</span>
+        <span>CESIUM<span>VS</span></span>
+      </a>
+      <div class="status"><i></i> IMAGINERÍA SATELITAL</div>
+    </header>
+
+    <section class="intro" aria-live="polite">
+      <p class="eyebrow">EXPLORADOR GLOBAL</p>
+      <h1>Observá el planeta<br />desde arriba.</h1>
+      <p class="hint">Arrastrá para navegar · Scroll para acercar · Numpad 1/2 para zoom</p>
+    </section>
+
+    <aside class="controls" aria-label="Controles del mapa">
+      <button id="homeButton" title="Volver a la vista inicial" aria-label="Volver a la vista inicial">⌂</button>
+      <button id="locateButton" title="Ir a Buenos Aires" aria-label="Ir a Buenos Aires">⌖</button>
+      <button id="earthButton" title="Centrar y viajar hacia la Tierra" aria-label="Centrar y viajar hacia la Tierra">🌍</button>
+    </aside>
+
+    <aside class="time-controls" aria-label="Controles de tiempo">
+      <button id="speedDownButton" title="Reducir velocidad" aria-label="Reducir velocidad">−</button>
+      <button id="playPauseButton" title="Pausar / reanudar" aria-label="Pausar o reanudar el tiempo">⏸</button>
+      <button id="speedUpButton" title="Aumentar velocidad" aria-label="Aumentar velocidad">+</button>
+      <button id="resetTimeButton" title="Volver a tiempo real" aria-label="Volver a tiempo real">↺</button>
+    </aside>
+
+    <div class="info-panel" id="infoPanel" aria-live="polite">
+      Cargando sistema Tierra-Luna …
+    </div>
+
+    <footer>ESRI WORLD IMAGERY · LABELS © CARTO, © OPENSTREETMAP · CESIUMJS</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/cesium@1.123.0/Build/Cesium/Cesium.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
